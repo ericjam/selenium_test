@@ -1,6 +1,6 @@
 from selenium import webdriver 
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -18,14 +18,15 @@ import random
 #import progressbar
 from bs4 import BeautifulSoup
 import bs4
+import os
+import sys
 
 delay = 3
-chrome_options = Options()
-chrome_options.add_argument('--incognito')
-chrome_options.add_argument('--headless')
-driver = webdriver.Chrome(
-        'chromedriver/chromedriver',
-        options=chrome_options)
+firefox_options = Options()
+# chrome_options.add_argument('--incognito')
+firefox_options.add_argument('--headless')
+
+driver = webdriver.Firefox(executable_path='driver/geckodriver', options=firefox_options)
 driver.implicitly_wait(2)
 
 driver.get('https://www.nadaguides.com/Boats/2017/Grady-White-Boats/180-FISHERMAN-CC_/32072308/Specs')
