@@ -24,7 +24,7 @@ chrome_options = Options()
 chrome_options.add_argument('--incognito')
 chrome_options.add_argument('--headless')
 driver = webdriver.Chrome(
-        '/Users/ericjames/Documents/Freelance/chromedriver/chromedriver',
+        'chromedriver/chromedriver',
         options=chrome_options)
 driver.implicitly_wait(2)
 
