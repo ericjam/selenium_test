@@ -28,7 +28,8 @@ with Display():
     # chrome_options.add_argument('--incognito')
     firefox_options.add_argument('--headless')
     
-    driver = webdriver.Firefox(executable_path='driver/geckodriver', options=firefox_options)
+    driver = webdriver.Firefox(options=firefox_options)
+    # driver = webdriver.Firefox(executable_path='driver/geckodriver', options=firefox_options)
     driver.implicitly_wait(2)
     
     try:
