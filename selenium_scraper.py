@@ -1,6 +1,6 @@
 from selenium import webdriver 
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -25,11 +25,12 @@ import sys
 with Display():
 
     delay = 3
-    firefox_options = Options()
+    # firefox_options = Options()
     # chrome_options.add_argument('--incognito')
     # firefox_options.add_argument('--headless')
     
-    driver = webdriver.Firefox(options=firefox_options)
+    # driver = webdriver.Firefox(options=firefox_options)
+    driver = webdriver.Firefox()
     # driver = webdriver.Firefox(executable_path='driver/geckodriver', options=firefox_options)
     driver.implicitly_wait(2)
     
