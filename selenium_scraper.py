@@ -23,10 +23,11 @@ import os
 import sys
 
 with Display():
+
     delay = 3
     firefox_options = Options()
     # chrome_options.add_argument('--incognito')
-    firefox_options.add_argument('--headless')
+    # firefox_options.add_argument('--headless')
     
     driver = webdriver.Firefox(options=firefox_options)
     # driver = webdriver.Firefox(executable_path='driver/geckodriver', options=firefox_options)
